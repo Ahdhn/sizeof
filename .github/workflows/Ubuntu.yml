@@ -20,7 +20,7 @@ jobs:
       - name: Run make
         working-directory: ${{github.workspace}}/build
         run: make -j      
-      #- name: Run Test
-      #  working-directory: ${{github.workspace}}/build
-      #  run: ctest --no-compress-output -T Test -C Release --output-on-failure
+      - name: Run Test
+        working-directory: ${{github.workspace}}/build
+        run: ctest --no-compress-output -T Test -C Release --output-on-failure
       - run: echo "This job's status is ${{ job.status }}."
